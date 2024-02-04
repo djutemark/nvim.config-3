@@ -48,3 +48,6 @@ vim.keymap.set("n", "<leader>n", ":new <CR>")
 -- Go to next/previous function
 vim.keymap.set("n", "<leader>fn", "]m")
 vim.keymap.set("n", "<leader>fp", "[m")
+
+
+vim.keymap.set("n", "<leader>ff", vim.lsp.buf.format)

@@ -13,10 +13,24 @@ Plug 'sbdchd/neoformat'
 
 Plug 'folke/persistence.nvim'
 
+Plug 'mg979/vim-visual-multi', {'branch': 'master'}
+
+Plug 'ggandor/leap.nvim'
+
+Plug 'github/copilot.vim'
+
+Plug 'numToStr/Comment.nvim'
+
+Plug 'RRethy/vim-illuminate'
+
+Plug 'nvim-tree/nvim-web-devicons'
+Plug 'folke/trouble.nvim'
+
 " LSP 
 Plug 'williamboman/mason.nvim'
 Plug 'williamboman/mason-lspconfig.nvim'
 Plug 'neovim/nvim-lspconfig'
+Plug 'j-hui/fidget.nvim'
 
 Plug 'hrsh7th/cmp-nvim-lsp'
 Plug 'hrsh7th/cmp-buffer'
