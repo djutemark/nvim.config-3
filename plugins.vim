@@ -26,6 +26,8 @@ Plug 'RRethy/vim-illuminate'
 Plug 'nvim-tree/nvim-web-devicons'
 Plug 'folke/trouble.nvim'
 
+Plug 'lukas-reineke/indent-blankline.nvim'
+
 " LSP 
 Plug 'williamboman/mason.nvim'
 Plug 'williamboman/mason-lspconfig.nvim'

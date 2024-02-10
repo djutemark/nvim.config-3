@@ -116,12 +116,13 @@ local on_attach = function(_, bufnr)
 	vim.keymap.set("n", "K", vim.lsp.buf.hover)
         vim.keymap.set("n", '<leader>rn', vim.lsp.buf.rename)
 	vim.keymap.set('n', 'gd', vim.lsp.buf.definition)
+	vim.keymap.set('n', 'gr', require('telescope.builtin').lsp_references)
 	vim.keymap.set('n', '<leader>ca', vim.lsp.buf.code_action)
 end
 
 local lspconfig = require('lspconfig')
 
-local servers = { 'omnisharp', 'gopls', 'templ' }
+local servers = { 'omnisharp', 'gopls', 'templ', 'svelte', 'tsserver' }
 for _, lsp in ipairs(servers) do
 	lspconfig[lsp].setup({
 		on_attach = on_attach,
