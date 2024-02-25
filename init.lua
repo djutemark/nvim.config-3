@@ -122,7 +122,7 @@ end
 
 local lspconfig = require('lspconfig')
 
-local servers = { 'omnisharp', 'gopls', 'templ', 'svelte', 'tsserver', 'clangd', 'sqlls' }
+local servers = { 'omnisharp', 'gopls', 'templ', 'svelte', 'tsserver', 'clangd', 'sqlls', 'rust_analyzer' }
 for _, lsp in ipairs(servers) do
 	lspconfig[lsp].setup({
 		on_attach = on_attach,
