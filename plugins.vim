@@ -47,6 +47,8 @@ Plug 'folke/trouble.nvim'
 
 Plug 'lukas-reineke/indent-blankline.nvim'
 
+Plug 'kevinhwang91/promise-async'
+Plug 'kevinhwang91/nvim-ufo'
 
 call plug#end()
 
