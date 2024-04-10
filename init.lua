@@ -10,6 +10,7 @@ require("mason-lspconfig").setup()
 
 -- Set up nvim-cmp.
 local cmp = require 'cmp'
+local luasnip = require 'luasnip'
 
 cmp.setup({
 	snippet = {
@@ -90,8 +91,9 @@ capabilities.textDocument.foldingRange = {
 	dynamicRegistration = false,
 	lineFoldingOnly = true,
 }
+local lspOverloads = require('lsp-overloads')
 
-local on_attach = function(_, bufnr)
+local on_attach = function(client, bufnr)
 	local custom_format = function()
 		if vim.bo.filetype == "templ" then
 			local cf_bufnr = vim.api.nvim_get_current_buf()
@@ -116,6 +118,11 @@ local on_attach = function(_, bufnr)
 		vim.cmd "w" -- Jag tror egentligen att jag inte vill spara, jag vill bara inte att befintliga ändringar ska förstöras. Men detta duger för tillfället.
 		custom_format()
 	end, opts)
+
+  if client.server_capabilities.signatureHelpProvider then
+    vim.keymap.set("n", "<A-s>", ":LspOverloadsSignature<CR>", { noremap = true, silent = true, buffer = bufnr })
+    vim.keymap.set("i", "<A-s>", "<esc>:LspOverloadsSignature<CR>a", { noremap = true, silent = true, buffer = bufnr })
+  end
 
 	vim.keymap.set("n", "K", vim.lsp.buf.hover)
         vim.keymap.set("n", '<leader>rn', vim.lsp.buf.rename)
