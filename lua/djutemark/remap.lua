@@ -32,7 +32,7 @@ vim.keymap.set("n", "<leader>qb", ":bp<bar>sp<bar>bn<bar>bd<CR>")
 vim.keymap.set("n", "<leader>qq", [[:qa<CR>]])
 
 -- restore the session for the current directory
-vim.api.nvim_set_keymap("n", "<leader>qs", [[<cmd>lua require("persistence").load()<cr>]], {})
+vim.api.nvim_set_keymap("n", "<leader>qs", [[<cmd>lua require("persistence").load()<CR>]], {})
 
 -- C-s saves!
 vim.keymap.set("n", "<C-s>", [[:w<CR>]])
@@ -49,5 +49,9 @@ vim.keymap.set("n", "<leader>n", ":new <CR>")
 vim.keymap.set("n", "<leader>fn", "]m")
 vim.keymap.set("n", "<leader>fp", "[m")
 
-
+-- Format files
 vim.keymap.set("n", "<leader>ff", vim.lsp.buf.format)
+
+-- Restart LSP
+vim.keymap.set("n", "<leader>lspr", ":LspRestart<CR>")
+
