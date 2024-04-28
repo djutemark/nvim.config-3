@@ -180,6 +180,18 @@ lspconfig['htmx'].setup({
     filetypes = { "html", "templ" },
 })
 
+vim.api.nvim_create_autocmd({ "BufNewFile", "BufRead" }, {
+  pattern = "*.wgsl",
+  callback = function()
+    vim.bo.filetype = "wgsl"
+  end,
+})
+lspconfig['wgsl_analyzer'].setup({
+    on_attach = on_attach,
+    capabilities = capabilities,
+    filetypes = { "wgsl" },
+})
+
 vim.filetype.add({ extension = { templ = "templ" } })
 
 require('fidget').setup({})
