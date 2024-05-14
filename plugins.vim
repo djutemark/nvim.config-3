@@ -52,5 +52,7 @@ Plug 'kevinhwang91/nvim-ufo'
 
 Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app && npx --yes yarn install' }
 
+Plug 'lewis6991/gitsigns.nvim'
+
 call plug#end()
 
