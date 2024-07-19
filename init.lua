@@ -143,12 +143,12 @@ end
 lspconfig['html'].setup {
 	capabilities = capabilities,
 	on_attach = on_attach,
-	filetypes = { "html", "templ" },
+	filetypes = { "html", "templ", "htmldjango" },
 }
 lspconfig['tailwindcss'].setup {
 	capabilities = capabilities,
 	on_attach = on_attach,
-	filetypes = { "templ", "html" },
+	filetypes = { "templ", "html", "htmldjango" },
 	init_options = { userLanguages = { templ = "html" } },
 }
 lspconfig['lua_ls'].setup {

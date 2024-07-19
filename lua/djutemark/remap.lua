@@ -49,9 +49,6 @@ vim.keymap.set("n", "<leader>n", ":new <CR>")
 vim.keymap.set("n", "<leader>fn", "]m")
 vim.keymap.set("n", "<leader>fp", "[m")
 
--- Format files
-vim.keymap.set("n", "<leader>ff", vim.lsp.buf.format)
-
 -- Restart LSP
 vim.keymap.set("n", "<leader>lspr", ":LspRestart<CR>")
 
