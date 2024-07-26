@@ -36,7 +36,7 @@ vim.api.nvim_set_keymap("n", "<leader>qs", [[<cmd>lua require("persistence").loa
 
 -- C-s saves!
 vim.keymap.set("n", "<C-s>", [[:w<CR>]])
-vim.keymap.set("n", "<C-S>", [[:noa w<CR>]])
+vim.keymap.set("n", "<C-S>", [[:wa<CR>]])
 
 -- <C-u/d> keeps cursor in the middle of the screen
 vim.keymap.set("n", "<C-u>", "<C-u>zz")
