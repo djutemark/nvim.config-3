@@ -117,6 +117,7 @@ local on_attach = function(client, bufnr)
 	vim.keymap.set("n", "<leader>ff", function ()
 		vim.cmd "w" -- Jag tror egentligen att jag inte vill spara, jag vill bara inte att befintliga ändringar ska förstöras. Men detta duger för tillfället.
 		custom_format()
+		vim.cmd "w"
 	end, opts)
 
   if client.server_capabilities.signatureHelpProvider then
