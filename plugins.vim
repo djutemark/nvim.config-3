@@ -56,5 +56,9 @@ Plug 'lewis6991/gitsigns.nvim'
 
 Plug 'NoahTheDuke/vim-just'
 
+Plug 'puremourning/vimspector'
+
 call plug#end()
 
+" It would be nice to do this with Lua...
+let g:vimspector_enable_mappings = 'HUMAN'
