@@ -12,8 +12,12 @@ vim.keymap.set("n", "<Leader>dh", "<Plug>VimspectorStepOut");
 vim.keymap.set("n", "<Leader>dl", "<Plug>VimspectorStepInto");
 vim.keymap.set("n", "<Leader>dj", "<Plug>VimspectorStepOver");
 
+vim.keymap.set("n", "<Leader>ds", "<Plug>VimspectorShowOutput");
+
+vim.keymap.set("n", "<F8>", "<Plug>VimspectorStop");
+
 -- for normal mode - the word under the cursor
-vim.keymap.set("n", "<Leader>di", "<Plug>VimspectorBalloonEval")
+vim.keymap.set("n", "<Leader>K", "<Plug>VimspectorBalloonEval")
 -- for visual mode, the visually selected text
-vim.keymap.set("x", "<Leader>di", "<Plug>VimspectorBalloonEval")
+vim.keymap.set("x", "<Leader>K", "<Plug>VimspectorBalloonEval")
 
