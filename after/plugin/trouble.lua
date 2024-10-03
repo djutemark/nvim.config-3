@@ -1,2 +1,4 @@
-vim.keymap.set("n", "<leader>t", "<cmd>TroubleToggle<cr>")
+require('trouble').setup({})
+
+vim.keymap.set("n", "<leader>t", ":Trouble diagnostics toggle<cr>")
 
