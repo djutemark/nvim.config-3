@@ -135,7 +135,7 @@ end
 
 local lspconfig = require('lspconfig')
 
-local servers = { 'omnisharp', 'gopls', 'templ', 'svelte', 'ts_ls', 'clangd', 'sqlls', 'rust_analyzer', 'gdscript', 'elixirls' }
+local servers = { 'omnisharp', 'gopls', 'templ', 'svelte', 'tsserver', 'clangd', 'sqlls', 'rust_analyzer', 'gdscript', 'elixirls', 'biome' }
 for _, lsp in ipairs(servers) do
 	lspconfig[lsp].setup({
 		on_attach = on_attach,
