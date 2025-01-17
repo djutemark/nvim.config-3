@@ -123,6 +123,15 @@ local on_attach = function(client, bufnr)
   if client.server_capabilities.signatureHelpProvider then
     vim.keymap.set("n", "<A-s>", ":LspOverloadsSignature<CR>", { noremap = true, silent = true, buffer = bufnr })
     vim.keymap.set("i", "<A-s>", "<esc>:LspOverloadsSignature<CR>a", { noremap = true, silent = true, buffer = bufnr })
+
+		lspOverloads.setup(client, {
+				keymaps = {
+          next_signature = "<A-j>",
+          previous_signature = "<A-k>",
+          next_parameter = "<A-l>",
+          previous_parameter = "<A-h>",
+        },
+		})
   end
 
 	vim.keymap.set("n", "K", vim.lsp.buf.hover)
