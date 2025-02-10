@@ -2,6 +2,8 @@
 
 vim.keymap.set("n", "<Leader>dd", ":call vimspector#Launch()<CR>")
 vim.keymap.set("n", "<Leader>de", ":call vimspector#Reset()<CR>")
+vim.keymap.set("n", "<Leader>dq", ":call vimspector#Reset()<CR>")
+vim.keymap.set("n", "<Leader>qd", ":call vimspector#Reset()<CR>")
 vim.keymap.set("n", "<Leader>dc", ":call vimspector#Continue()<CR>")
 
 vim.keymap.set("n", "<Leader>dt", ":call vimspector#ToggleBreakpoint()<CR>")
